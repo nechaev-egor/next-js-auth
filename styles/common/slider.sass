@@ -1,0 +1,70 @@
+.slick-track
+    display: flex
+    height: 100%
+    will-change: transform
+    transition: transform 0.5s 
+.slick-slider
+    height: 100%
+    .slick-arrow
+        display: none !important
+.slick-slide
+    transition: all 0.5s 
+    & > div
+        height: 100%
+
+.slick-active 
+    z-index: 1
+
+.slick-slider
+    height: 100%
+
+.slick-list
+    height: 100%
+
+.slick-dots
+    position: relative
+    bottom: auto
+    display: flex !important
+    align-items: center
+    justify-content: center
+    width: gem(375)
+    li
+        position: relative
+        display: inline-block
+        width: gem(8)
+        height: gem(8)
+        margin-right: gem(6)
+        margin-left: 0
+        cursor: pointer
+        margin: 0 gem(5)
+        padding: 0
+        button
+            position: relative
+            width: 100%
+            height: 100%
+            padding: 0
+            border: 0
+            background: transparent
+            display: block
+            outline: none
+            line-height: 0
+            font-size: 0
+            color: transparent
+            cursor: pointer
+            &:before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: var(--color-grey2)
+                border-radius: 50%
+                transition: all .3s ease
+                text-align: center
+                -webkit-font-smoothing: antialiased
+                -moz-osx-font-smoothing: grayscale
+        &.slick-active
+            button
+                &:before
+                    background: var(--color-black)
